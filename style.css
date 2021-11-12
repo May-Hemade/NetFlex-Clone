@@ -1,0 +1,33 @@
+body{
+    background-color: #212529;
+}
+h1{
+    color: white;
+
+}
+
+.headerrr{
+    display: inline;
+}
+
+nav{
+    background-color: #212529;
+}
+
+.badge {
+    position: absolute;
+    bottom: 3px;
+    left: 3px;
+}
+
+#buttonUSER {
+    background-color: #212529;
+}
+
+#buttonGenre {
+    background-color: #212529;
+}
+
+footer {
+    background-color: #212529;
+}
