@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylebackoffice.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg  navbar-dark px-5">
+        <a class="navbar-brand" href="#"><img src=".\assets\netflix_logo.png" alt="netflix logo image" height="46"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="homepage.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">TV Shows</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Movies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Recently added</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Backoffice</a>
+                </li>
+            </ul>
+            
+            <img src="./Icons/lens.svg" class="lens-icon mr-3" />
+            
+            <a class="nav-link active text-white mr-2" href="#">KIDS</a>
+            
+            <img src="./Icons/bell16.ico" class="lens-icon mr-3" />
+            
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary border-0 dropdown-toggle" data-toggle="dropdown" aria-expanded="false" id="buttonUSER">
+                    <img src="Icons/userprofile.png" class="mr-1" width="32"/>            
+                </button>
+                <div class="dropdown-menu ">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Category</th>
+            <th scope="col">imgageUrl</th>
+            <th scope="col">Options</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">3738474837</th>
+            <td>Spiderman</td>
+            <td>a man get bite by a spider and fight the crime</td>
+            <td>Action</td>
+            <td><a href="cartelerasdecine.info/wp-content/uploads/2017/07/Spiderman-de-regreso-a-casa-homecoming-carteleras-de-cine.jpg">cartelerasdecine.info/wp-content/uploads/2017/07/Spiderman-de-regreso-a-casa-homecoming-carteleras-de-cine.jpg</a></td>
+            <td><a href="" onclick="editMovie()">Edit</a><br><a href=""  onclick="deleteMovie()">Delete</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="container">
+        <div class="title">Post new product or edit one</div>
+        <div class="content">
+          <form action="#" onsubmit="postMovie(event)">
+            <div id="product-details" class="user-details">
+              <div class="input-box">
+                <span class="details">Name</span>
+                <input id="name-input" type="text" placeholder="name..." required>
+              </div>
+              <div class="input-box">
+                <span class="details">Description</span>
+                <input id="description-input" type="text" placeholder="description..." required>
+              </div>
+              <div class="input-box">
+                <span class="details">Category</span>
+                <input id="category-input" type="text" placeholder="category..." required>
+              </div>
+              <div class="input-box">
+                <span class="details">Image</span>
+                <input id="image-input" type="text" placeholder="image url..." required>
+              </div>
+              <div class="input-box">
+                <p id="movie-id">Id: <span id="table-id"></span></p>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between px-5">
+            <div class="px-5 button">
+              <input type="submit" value="Post" >
+            </div>
+            <div class="px-5 button">
+              <input type="button" value="Edit" onclick="editbutton()">
+            </div>
+            
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+      <script src="backoffice.js"></script>
+</body>
+</html>
